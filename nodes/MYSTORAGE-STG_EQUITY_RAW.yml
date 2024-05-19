@@ -1,0 +1,221 @@
+steps:
+  STG_EQUITY_RAW-949eba71-ff7f-41d9-be1d-7f85e0f93d66:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: MYSTORAGE
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: b4bd3a88-1669-48f1-b471-8220d0320150
+              stepCounter: 949eba71-ff7f-41d9-be1d-7f85e0f93d66
+            dataType: VARCHAR(255)
+            description: ""
+            name: SC_CODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d2fffad1-fa04-4334-85e9-df1e9832fabd
+                    stepCounter: 7a7ee113-ffd0-463e-9bcc-0b561c06683e
+                transform: ""
+          - columnReference:
+              columnCounter: 5a2c09e3-cf90-4ee9-a85d-e97d43e990c3
+              stepCounter: 949eba71-ff7f-41d9-be1d-7f85e0f93d66
+            dataType: VARCHAR(255)
+            description: ""
+            name: SC_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3716b069-cfd9-4345-88a0-54352e81a72f
+                    stepCounter: 7a7ee113-ffd0-463e-9bcc-0b561c06683e
+                transform: ""
+          - columnReference:
+              columnCounter: 8c99d2c1-6022-46a4-b54d-987f338b18f0
+              stepCounter: 949eba71-ff7f-41d9-be1d-7f85e0f93d66
+            dataType: VARCHAR(255)
+            description: ""
+            name: SC_GROUP
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d2fdbe0f-6907-4ddc-a6a5-2c329810019a
+                    stepCounter: 7a7ee113-ffd0-463e-9bcc-0b561c06683e
+                transform: ""
+          - columnReference:
+              columnCounter: d0290a6e-c106-4b31-8d86-984815b1a532
+              stepCounter: 949eba71-ff7f-41d9-be1d-7f85e0f93d66
+            dataType: VARCHAR(255)
+            description: ""
+            name: SC_TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 214e222e-510a-4e24-b1bb-564afeead2e9
+                    stepCounter: 7a7ee113-ffd0-463e-9bcc-0b561c06683e
+                transform: ""
+          - columnReference:
+              columnCounter: 21cb5777-8fd0-4f2e-8eda-558f93b8d9dc
+              stepCounter: 949eba71-ff7f-41d9-be1d-7f85e0f93d66
+            dataType: VARCHAR(255)
+            description: ""
+            name: OPEN_VALUE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c3b6734d-4dac-46b4-89ef-b8a063d86f11
+                    stepCounter: 7a7ee113-ffd0-463e-9bcc-0b561c06683e
+                transform: ""
+          - columnReference:
+              columnCounter: 0996fb53-9e77-4fc5-beda-2412fd31c8ee
+              stepCounter: 949eba71-ff7f-41d9-be1d-7f85e0f93d66
+            dataType: VARCHAR(255)
+            description: ""
+            name: HIGH_VALUE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3a6885a8-f381-4edb-9bb3-6bf7019fb276
+                    stepCounter: 7a7ee113-ffd0-463e-9bcc-0b561c06683e
+                transform: ""
+          - columnReference:
+              columnCounter: b3d1652f-afa2-4844-8f3a-b18109d9b17c
+              stepCounter: 949eba71-ff7f-41d9-be1d-7f85e0f93d66
+            dataType: VARCHAR(255)
+            description: ""
+            name: LOW_VALUE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0db4395a-3de1-45be-bbc2-88deb338a6cf
+                    stepCounter: 7a7ee113-ffd0-463e-9bcc-0b561c06683e
+                transform: ""
+          - columnReference:
+              columnCounter: 3fec7c9b-4749-43cc-ba40-4bf8040d47f5
+              stepCounter: 949eba71-ff7f-41d9-be1d-7f85e0f93d66
+            dataType: VARCHAR(255)
+            description: ""
+            name: CLOSE_VALUE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 75000d5d-a7c2-4cb2-9f62-cb1e0354b156
+                    stepCounter: 7a7ee113-ffd0-463e-9bcc-0b561c06683e
+                transform: ""
+          - columnReference:
+              columnCounter: df27c49b-e1cb-49e9-bb39-2784b674807b
+              stepCounter: 949eba71-ff7f-41d9-be1d-7f85e0f93d66
+            dataType: VARCHAR(255)
+            description: ""
+            name: EQ_LAST_VALUE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: bd1450dd-6f43-4b25-97ce-3be9a71d03e2
+                    stepCounter: 7a7ee113-ffd0-463e-9bcc-0b561c06683e
+                transform: ""
+          - columnReference:
+              columnCounter: 7a222b12-6cb0-48d3-a9d9-369214b1fade
+              stepCounter: 949eba71-ff7f-41d9-be1d-7f85e0f93d66
+            dataType: VARCHAR(255)
+            description: ""
+            name: PREVCLOSE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 920304ab-7fe4-4608-88f4-ade245b2e3a0
+                    stepCounter: 7a7ee113-ffd0-463e-9bcc-0b561c06683e
+                transform: ""
+          - columnReference:
+              columnCounter: bd99635d-3916-4f92-960a-cd400883cec5
+              stepCounter: 949eba71-ff7f-41d9-be1d-7f85e0f93d66
+            dataType: VARCHAR(255)
+            description: ""
+            name: NO_TRADES
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: dcc6d3cb-9c20-463d-9bb2-37fd338b79ee
+                    stepCounter: 7a7ee113-ffd0-463e-9bcc-0b561c06683e
+                transform: ""
+          - columnReference:
+              columnCounter: 449e5507-6567-4630-af1e-6c86b37fc402
+              stepCounter: 949eba71-ff7f-41d9-be1d-7f85e0f93d66
+            dataType: VARCHAR(255)
+            description: ""
+            name: NO_OF_SHRS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f5958ad0-5e8a-4160-b3f2-ca9f0a0c66cb
+                    stepCounter: 7a7ee113-ffd0-463e-9bcc-0b561c06683e
+                transform: ""
+          - columnReference:
+              columnCounter: d6f1180c-ea66-4895-bfaa-86bd8887c6ad
+              stepCounter: 949eba71-ff7f-41d9-be1d-7f85e0f93d66
+            dataType: VARCHAR(255)
+            description: ""
+            name: NET_TURNOV
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3020c15e-2860-4680-ad2b-5ab13abc6c2f
+                    stepCounter: 7a7ee113-ffd0-463e-9bcc-0b561c06683e
+                transform: ""
+          - columnReference:
+              columnCounter: 3185c315-6255-4150-95b4-65c52e9dc5c9
+              stepCounter: 949eba71-ff7f-41d9-be1d-7f85e0f93d66
+            dataType: VARCHAR(255)
+            description: ""
+            name: TDCLOINDI
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c937893f-d5e4-4e00-a1a2-8979e006f60a
+                    stepCounter: 7a7ee113-ffd0-463e-9bcc-0b561c06683e
+                transform: ""
+          - columnReference:
+              columnCounter: ce6aa1d0-4468-497e-a984-a0c36c54296a
+              stepCounter: 949eba71-ff7f-41d9-be1d-7f85e0f93d66
+            dataType: VARCHAR(255)
+            description: ""
+            name: SYS_FILE_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b31f9369-36ba-49b8-aa45-ff676f37fd23
+                    stepCounter: 7a7ee113-ffd0-463e-9bcc-0b561c06683e
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              EQUITY_RAW: 7a7ee113-ffd0-463e-9bcc-0b561c06683e
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: MYSTORAGE
+                nodeName: EQUITY_RAW
+            join:
+              joinCondition: |-
+                FROM {{ ref('MYSTORAGE', 'EQUITY_RAW') }} "EQUITY_RAW"
+                WHERE "SC_GROUP" IN ('A','B','T','Z')
+                AND "SC_CODE" = '500114'
+            name: STG_EQUITY_RAW
+            noLinkRefs: []
+      name: STG_EQUITY_RAW
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: 949eba71-ff7f-41d9-be1d-7f85e0f93d66
