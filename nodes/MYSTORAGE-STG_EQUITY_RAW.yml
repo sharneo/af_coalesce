@@ -1,0 +1,242 @@
+steps:
+  STG_EQUITY_RAW-1c9ed412-1341-4d10-82fc-94583ea7b97a:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: MYSTORAGE
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 014f5c1b-9230-4dca-9f81-4cf1c74a88c8
+              stepCounter: 1c9ed412-1341-4d10-82fc-94583ea7b97a
+            dataType: NUMBER
+            description: ""
+            name: PSTG_EQUITY_RAW_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: cd696f7a-3c71-4c76-bdd2-90bde4582a35
+                    stepCounter: 41be4f2c-10a5-4629-849e-42c8537067ae
+                transform: HASH(SC_CODE,SC_NAME,SYSTEM_CREATE_DATE)
+          - columnReference:
+              columnCounter: 189af4fa-8701-48c8-983d-89ea755c050e
+              stepCounter: 1c9ed412-1341-4d10-82fc-94583ea7b97a
+            dataType: VARCHAR(10)
+            description: ""
+            name: SC_CODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2ab34708-fcf8-479b-8706-0f646da42c08
+                    stepCounter: 41be4f2c-10a5-4629-849e-42c8537067ae
+                transform: CAST(SC_CODE AS VARCHAR(10))
+          - columnReference:
+              columnCounter: 995b6450-2410-4af1-95c6-44ca3bc42699
+              stepCounter: 1c9ed412-1341-4d10-82fc-94583ea7b97a
+            dataType: VARCHAR(255)
+            description: ""
+            name: SC_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b2fe2cad-0dcb-40a5-8874-55071c3d72d3
+                    stepCounter: 41be4f2c-10a5-4629-849e-42c8537067ae
+                transform: ""
+          - columnReference:
+              columnCounter: 1a71434b-8d5c-4e35-b7d4-05f51b075a35
+              stepCounter: 1c9ed412-1341-4d10-82fc-94583ea7b97a
+            dataType: VARCHAR(4)
+            description: ""
+            name: SC_GROUP
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1f6ce5e8-7cbb-43c1-87ba-f8292301ff8f
+                    stepCounter: 41be4f2c-10a5-4629-849e-42c8537067ae
+                transform: CAST(SC_GROUP AS VARCHAR(4))
+          - columnReference:
+              columnCounter: 02047082-bd89-4fdb-9739-79beddd79da8
+              stepCounter: 1c9ed412-1341-4d10-82fc-94583ea7b97a
+            dataType: VARCHAR(4)
+            description: ""
+            name: SC_TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 449f21a2-ec69-4415-9904-40b5c6eef835
+                    stepCounter: 41be4f2c-10a5-4629-849e-42c8537067ae
+                transform: |
+                  CAST(SC_TYPE AS VARCHAR(4))
+          - columnReference:
+              columnCounter: 1c8cd9b5-2a97-43c2-82d2-89533c2568a5
+              stepCounter: 1c9ed412-1341-4d10-82fc-94583ea7b97a
+            dataType: NUMBER(17,3)
+            description: ""
+            name: OPEN_VALUE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: bc33e0a3-05c1-48a0-944c-a699ea7e52cf
+                    stepCounter: 41be4f2c-10a5-4629-849e-42c8537067ae
+                transform: CAST(OPEN_VALUE AS NUMBER(17,3))
+          - columnReference:
+              columnCounter: a96ed817-13da-49b3-8fd4-00103d956343
+              stepCounter: 1c9ed412-1341-4d10-82fc-94583ea7b97a
+            dataType: NUMBER(17,3)
+            description: ""
+            name: HIGH_VALUE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: eef06000-048c-404e-b311-b009a4515ea8
+                    stepCounter: 41be4f2c-10a5-4629-849e-42c8537067ae
+                transform: CAST(HIGH_VALUE AS NUMBER(17,3))
+          - columnReference:
+              columnCounter: 42123e7c-787e-420e-ac95-f964c6ced825
+              stepCounter: 1c9ed412-1341-4d10-82fc-94583ea7b97a
+            dataType: NUMBER(17,3)
+            description: ""
+            name: LOW_VALUE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0a782f87-78e3-4512-91ee-7c432cc210a0
+                    stepCounter: 41be4f2c-10a5-4629-849e-42c8537067ae
+                transform: CAST(LOW_VALUE AS NUMBER(17,3))
+          - columnReference:
+              columnCounter: 46c057e9-b55e-4b2b-8124-2daeac12ba50
+              stepCounter: 1c9ed412-1341-4d10-82fc-94583ea7b97a
+            dataType: NUMBER(17,3)
+            description: ""
+            name: CLOSE_VALUE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 02c15979-b418-4267-b135-10a2fb630557
+                    stepCounter: 41be4f2c-10a5-4629-849e-42c8537067ae
+                transform: CAST(CLOSE_VALUE AS NUMBER(17,3))
+          - columnReference:
+              columnCounter: c5428ffb-7605-4090-a22e-a799566b6bd6
+              stepCounter: 1c9ed412-1341-4d10-82fc-94583ea7b97a
+            dataType: NUMBER(17,3)
+            description: ""
+            name: EQ_LAST_VALUE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 21f94f29-a7c7-4fc7-8fd0-fc2bdfc7689b
+                    stepCounter: 41be4f2c-10a5-4629-849e-42c8537067ae
+                transform: CAST(EQ_LAST_VALUE AS NUMBER(17,3))
+          - columnReference:
+              columnCounter: 35cc6866-d53d-4d76-aaf4-dc24ba528e47
+              stepCounter: 1c9ed412-1341-4d10-82fc-94583ea7b97a
+            dataType: NUMBER(17,3)
+            description: ""
+            name: PREVCLOSE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e59ca502-2ed8-4845-a4b9-19db09ad7c91
+                    stepCounter: 41be4f2c-10a5-4629-849e-42c8537067ae
+                transform: CAST(PREVCLOSE AS NUMBER(17,3))
+          - columnReference:
+              columnCounter: 1a377bee-2c42-440d-856c-76b3f6f7aa57
+              stepCounter: 1c9ed412-1341-4d10-82fc-94583ea7b97a
+            dataType: NUMBER
+            description: ""
+            name: NO_TRADES
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 19469a24-cdc7-4b33-8898-1dfea2fe5bb3
+                    stepCounter: 41be4f2c-10a5-4629-849e-42c8537067ae
+                transform: CAST(NO_TRADES AS NUMBER)
+          - columnReference:
+              columnCounter: b271fc22-317a-4537-86db-727fd288b0ba
+              stepCounter: 1c9ed412-1341-4d10-82fc-94583ea7b97a
+            dataType: NUMBER
+            description: ""
+            name: NO_OF_SHRS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9f3b655d-ec50-4ada-b77d-506153623f36
+                    stepCounter: 41be4f2c-10a5-4629-849e-42c8537067ae
+                transform: CAST(NO_OF_SHRS AS NUMBER)
+          - columnReference:
+              columnCounter: fc3becf3-a6ce-4c4d-a293-d6e69da126b6
+              stepCounter: 1c9ed412-1341-4d10-82fc-94583ea7b97a
+            dataType: VARCHAR(255)
+            description: ""
+            name: SYS_FILE_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0977fabb-9289-487f-ac9e-0b396b5b0791
+                    stepCounter: 41be4f2c-10a5-4629-849e-42c8537067ae
+                transform: ""
+          - columnReference:
+              columnCounter: 2e789904-099e-4b1e-b2c8-9b25aadf9e33
+              stepCounter: 1c9ed412-1341-4d10-82fc-94583ea7b97a
+            dataType: TIMESTAMP
+            description: ""
+            name: SYSTEM_CREATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6f08cd2c-e597-42ae-b120-4f510c4da9a3
+                    stepCounter: 41be4f2c-10a5-4629-849e-42c8537067ae
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 5e429631-8e6f-4ab1-9727-ce76bc1da178
+              stepCounter: 1c9ed412-1341-4d10-82fc-94583ea7b97a
+            config: {}
+            dataType: DATE
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: TRADE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: TO_DATE('20' || SUBSTRING(SYS_FILE_NAME,7,2) || '-' || SUBSTRING(SYS_FILE_NAME,5,2) || '-' || SUBSTRING(SYS_FILE_NAME,3,2))
+            systemColumnType: None
+            transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              PSTG_EQUITY_RAW: 41be4f2c-10a5-4629-849e-42c8537067ae
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: MYSTORAGE
+                nodeName: PSTG_EQUITY_RAW
+            join:
+              joinCondition: |-
+                FROM {{ ref('MYSTORAGE', 'PSTG_EQUITY_RAW') }} "PSTG_EQUITY_RAW"
+                QUALIFY ROW_NUMBER() OVER (PARTITION BY SC_CODE,TRADE_DATE ORDER BY SYSTEM_CREATE_DATE DESC) = 1 
+            name: STG_EQUITY_RAW
+            noLinkRefs: []
+      name: STG_EQUITY_RAW
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: 1c9ed412-1341-4d10-82fc-94583ea7b97a
