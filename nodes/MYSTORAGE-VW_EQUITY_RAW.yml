@@ -1,0 +1,109 @@
+steps:
+  VW_EQUITY_RAW-ed0583b5-8265-4be4-97d6-e91ffb964a12:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: MYSTORAGE
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: a212cdae-ca0e-43ff-9c07-b5f0521d2f04
+              stepCounter: ed0583b5-8265-4be4-97d6-e91ffb964a12
+            dataType: VARCHAR(10)
+            description: ""
+            isBusinessKey: true
+            name: SC_CODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 189af4fa-8701-48c8-983d-89ea755c050e
+                    stepCounter: 1c9ed412-1341-4d10-82fc-94583ea7b97a
+                transform: ""
+          - columnReference:
+              columnCounter: bd8690d7-2bba-40ec-8f52-aae395c03fe6
+              stepCounter: ed0583b5-8265-4be4-97d6-e91ffb964a12
+            dataType: VARCHAR(255)
+            description: ""
+            name: SC_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 995b6450-2410-4af1-95c6-44ca3bc42699
+                    stepCounter: 1c9ed412-1341-4d10-82fc-94583ea7b97a
+                transform: ""
+          - columnReference:
+              columnCounter: fbaf097e-8835-4b0c-9e7b-128597a1a814
+              stepCounter: ed0583b5-8265-4be4-97d6-e91ffb964a12
+            dataType: VARCHAR(4)
+            description: ""
+            name: SC_GROUP
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1a71434b-8d5c-4e35-b7d4-05f51b075a35
+                    stepCounter: 1c9ed412-1341-4d10-82fc-94583ea7b97a
+                transform: ""
+          - columnReference:
+              columnCounter: 9a6d2eda-151d-4f18-aa94-7303e38aec92
+              stepCounter: ed0583b5-8265-4be4-97d6-e91ffb964a12
+            dataType: VARCHAR(4)
+            description: ""
+            name: SC_TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 02047082-bd89-4fdb-9739-79beddd79da8
+                    stepCounter: 1c9ed412-1341-4d10-82fc-94583ea7b97a
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: a22bdf2d-8458-41af-b483-c15a2304a79a
+              stepCounter: ed0583b5-8265-4be4-97d6-e91ffb964a12
+            config: {}
+            dataType: ""
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: MD_HASH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: HASH(SC_CODE,SC_NAME,SC_GROUP,SC_TYPE)
+            systemColumnType: None
+            transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              STG_EQUITY_RAW: 1c9ed412-1341-4d10-82fc-94583ea7b97a
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: MYSTORAGE
+                nodeName: STG_EQUITY_RAW
+            join:
+              joinCondition: |-
+                FROM {{ ref('MYSTORAGE', 'STG_EQUITY_RAW') }} "STG_EQUITY_RAW"
+                WHERE SC_GROUP IN ('A','B')
+                QUALIFY ROW_NUMBER() OVER (PARTITION BY SC_CODE ORDER BY SC_CODE DESC) = 1 
+            name: VW_EQUITY_RAW
+            noLinkRefs: []
+      name: VW_EQUITY_RAW
+      overrideSQL: false
+      schema: ""
+      sqlType: Dimension
+      type: sql
+    stepCounter: ed0583b5-8265-4be4-97d6-e91ffb964a12

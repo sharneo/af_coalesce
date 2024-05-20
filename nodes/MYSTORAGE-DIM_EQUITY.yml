@@ -1,0 +1,236 @@
+steps:
+  DIM_EQUITY-b272036f-f7f7-4174-b9d7-4ad0abbe2ecb:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: MYSTORAGE
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: false
+              isDistinct: false
+            columnReference:
+              columnCounter: 297c4514-9f83-4444-9979-840b3a70681b
+              stepCounter: b272036f-f7f7-4174-b9d7-4ad0abbe2ecb
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSurrogateKey: true
+            name: EQUITY_SK
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: HASH(SC_CODE,SC_NAME,SC_GROUP,SC_TYPE)
+          - appliedColumnTests:
+              hasNull: false
+              isDistinct: true
+            columnReference:
+              columnCounter: 405d3119-5b46-41a3-b4a2-481674be0a6e
+              stepCounter: b272036f-f7f7-4174-b9d7-4ad0abbe2ecb
+            dataType: VARCHAR(10)
+            description: Script Code
+            isBusinessKey: true
+            isChangeTracking: true
+            name: SC_CODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a212cdae-ca0e-43ff-9c07-b5f0521d2f04
+                    stepCounter: ed0583b5-8265-4be4-97d6-e91ffb964a12
+                transform: ""
+          - appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: 3ccd44cf-4a6b-41d1-b024-5b6b09fc211d
+              stepCounter: b272036f-f7f7-4174-b9d7-4ad0abbe2ecb
+            dataType: VARCHAR(255)
+            description: Script Name
+            isChangeTracking: true
+            name: SC_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: bd8690d7-2bba-40ec-8f52-aae395c03fe6
+                    stepCounter: ed0583b5-8265-4be4-97d6-e91ffb964a12
+                transform: ""
+          - appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: 12ce811c-6b33-43f3-b1ff-99c190cae7d9
+              stepCounter: b272036f-f7f7-4174-b9d7-4ad0abbe2ecb
+            dataType: VARCHAR(4)
+            description: Scrip Group
+            isChangeTracking: true
+            name: SC_GROUP
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: fbaf097e-8835-4b0c-9e7b-128597a1a814
+                    stepCounter: ed0583b5-8265-4be4-97d6-e91ffb964a12
+                transform: ""
+          - appliedColumnTests:
+              hasNull: true
+              isDistinct: false
+            columnReference:
+              columnCounter: 3d9f76fa-72d4-45a8-92e8-3ca64087de19
+              stepCounter: b272036f-f7f7-4174-b9d7-4ad0abbe2ecb
+            dataType: VARCHAR(4)
+            description: Scrip Type
+            isChangeTracking: true
+            name: SC_TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9a6d2eda-151d-4f18-aa94-7303e38aec92
+                    stepCounter: ed0583b5-8265-4be4-97d6-e91ffb964a12
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: false
+              isDistinct: false
+            columnReference:
+              columnCounter: 50cb5720-5637-4d81-88ce-ab594f85f809
+              stepCounter: b272036f-f7f7-4174-b9d7-4ad0abbe2ecb
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            isSystemVersion: true
+            name: SYSTEM_VERSION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: false
+              isDistinct: false
+            columnReference:
+              columnCounter: baa3162c-a9b1-4353-a62d-9f1d28e5212f
+              stepCounter: b272036f-f7f7-4174-b9d7-4ad0abbe2ecb
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            isSystemCurrentFlag: true
+            name: SYSTEM_CURRENT_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: false
+              isDistinct: false
+            columnReference:
+              columnCounter: 9c1e06bb-7d04-4c52-80ce-1c48c5c76fcf
+              stepCounter: b272036f-f7f7-4174-b9d7-4ad0abbe2ecb
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemStartDate: true
+            name: SYSTEM_START_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: false
+              isDistinct: false
+            columnReference:
+              columnCounter: 9ba05fae-d194-4186-9262-cd353d799b20
+              stepCounter: b272036f-f7f7-4174-b9d7-4ad0abbe2ecb
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemEndDate: true
+            name: SYSTEM_END_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST('2999-12-31 00:00:00' AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: false
+              isDistinct: false
+            columnReference:
+              columnCounter: c32a13a4-791d-4c6a-9f8a-4e46079cf36d
+              stepCounter: b272036f-f7f7-4174-b9d7-4ad0abbe2ecb
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemCreateDate: true
+            name: SYSTEM_CREATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests:
+              hasNull: false
+              isDistinct: false
+            columnReference:
+              columnCounter: c3d73189-21dd-41f7-bcbf-05caf307257f
+              stepCounter: b272036f-f7f7-4174-b9d7-4ad0abbe2ecb
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            isSystemUpdateDate: true
+            name: SYSTEM_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+        cteString: ""
+        enabledColumnTestIDs:
+          - isDistinct
+          - hasNull
+        sourceMapping:
+          - aliases:
+              VW_EQUITY_RAW: ed0583b5-8265-4be4-97d6-e91ffb964a12
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: MYSTORAGE
+                nodeName: VW_EQUITY_RAW
+            join:
+              joinCondition: FROM {{ ref('MYSTORAGE', 'VW_EQUITY_RAW') }} "VW_EQUITY_RAW"
+            name: DIM_EQUITY
+            noLinkRefs: []
+      name: DIM_EQUITY
+      overrideSQL: false
+      schema: ""
+      sqlType: Dimension
+      type: sql
+    stepCounter: b272036f-f7f7-4174-b9d7-4ad0abbe2ecb
