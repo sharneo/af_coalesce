@@ -1,0 +1,242 @@
+steps:
+  DT_WRK_EQUITY_RAW-355509bf-a1e1-45da-9fd5-b00efde2421d:
+    operation:
+      config:
+        downstreamOption: true
+        groupByAll: false
+        initialize: ON_CREATE
+        insertStrategy: UNION ALL
+        lagSpecification:
+          items:
+            - lagPeriod: null
+              lagValue: 60
+        refresh_mode: INCREMENTAL
+        selectDistinct: false
+        warehouseName: SAPN_WH
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: MYSTORAGE
+      materializationType: Dynamic Table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 4d0387cc-6d00-4903-8a58-3fd8d0ab7977
+              stepCounter: 355509bf-a1e1-45da-9fd5-b00efde2421d
+            dataType: NUMBER
+            description: ""
+            name: PSTG_EQUITY_RAW_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 014f5c1b-9230-4dca-9f81-4cf1c74a88c8
+                    stepCounter: 1c9ed412-1341-4d10-82fc-94583ea7b97a
+                transform: ""
+          - columnReference:
+              columnCounter: 8f51e9a2-0854-4d3d-9540-adf4129fcdf5
+              stepCounter: 355509bf-a1e1-45da-9fd5-b00efde2421d
+            dataType: VARCHAR(10)
+            description: ""
+            name: SC_CODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 189af4fa-8701-48c8-983d-89ea755c050e
+                    stepCounter: 1c9ed412-1341-4d10-82fc-94583ea7b97a
+                transform: ""
+          - columnReference:
+              columnCounter: d10b8d4e-f9ad-4842-8b6a-d5dd64890e45
+              stepCounter: 355509bf-a1e1-45da-9fd5-b00efde2421d
+            dataType: VARCHAR(255)
+            description: ""
+            name: SC_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 995b6450-2410-4af1-95c6-44ca3bc42699
+                    stepCounter: 1c9ed412-1341-4d10-82fc-94583ea7b97a
+                transform: ""
+          - columnReference:
+              columnCounter: 34033d8d-310d-4f84-acd9-5ef6a5fac24d
+              stepCounter: 355509bf-a1e1-45da-9fd5-b00efde2421d
+            dataType: VARCHAR(4)
+            description: ""
+            name: SC_GROUP
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1a71434b-8d5c-4e35-b7d4-05f51b075a35
+                    stepCounter: 1c9ed412-1341-4d10-82fc-94583ea7b97a
+                transform: ""
+          - columnReference:
+              columnCounter: b2dfdd8a-8a7a-4004-ba6d-5af283de29f6
+              stepCounter: 355509bf-a1e1-45da-9fd5-b00efde2421d
+            dataType: VARCHAR(4)
+            description: ""
+            name: SC_TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 02047082-bd89-4fdb-9739-79beddd79da8
+                    stepCounter: 1c9ed412-1341-4d10-82fc-94583ea7b97a
+                transform: ""
+          - columnReference:
+              columnCounter: 717426e3-c358-4746-9c20-347e1fc4af29
+              stepCounter: 355509bf-a1e1-45da-9fd5-b00efde2421d
+            dataType: NUMBER(17,3)
+            description: ""
+            name: OPEN_VALUE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1c8cd9b5-2a97-43c2-82d2-89533c2568a5
+                    stepCounter: 1c9ed412-1341-4d10-82fc-94583ea7b97a
+                transform: ""
+          - columnReference:
+              columnCounter: d87e9250-4a01-460c-9f8c-f075fff31c90
+              stepCounter: 355509bf-a1e1-45da-9fd5-b00efde2421d
+            dataType: NUMBER(17,3)
+            description: ""
+            name: HIGH_VALUE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a96ed817-13da-49b3-8fd4-00103d956343
+                    stepCounter: 1c9ed412-1341-4d10-82fc-94583ea7b97a
+                transform: ""
+          - columnReference:
+              columnCounter: 46b3d6f7-f5b0-49fc-b107-7a77411ec5cb
+              stepCounter: 355509bf-a1e1-45da-9fd5-b00efde2421d
+            dataType: NUMBER(17,3)
+            description: ""
+            name: LOW_VALUE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 42123e7c-787e-420e-ac95-f964c6ced825
+                    stepCounter: 1c9ed412-1341-4d10-82fc-94583ea7b97a
+                transform: ""
+          - columnReference:
+              columnCounter: efd859b7-1542-4cb6-a90c-87bb2a92df8e
+              stepCounter: 355509bf-a1e1-45da-9fd5-b00efde2421d
+            dataType: NUMBER(17,3)
+            description: ""
+            name: CLOSE_VALUE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 46c057e9-b55e-4b2b-8124-2daeac12ba50
+                    stepCounter: 1c9ed412-1341-4d10-82fc-94583ea7b97a
+                transform: ""
+          - columnReference:
+              columnCounter: 9ee05dd5-2bb5-47bc-bb24-ee8e263e567c
+              stepCounter: 355509bf-a1e1-45da-9fd5-b00efde2421d
+            dataType: NUMBER(17,3)
+            description: ""
+            name: EQ_LAST_VALUE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c5428ffb-7605-4090-a22e-a799566b6bd6
+                    stepCounter: 1c9ed412-1341-4d10-82fc-94583ea7b97a
+                transform: ""
+          - columnReference:
+              columnCounter: 39eec4dd-1eab-45f8-bc25-6e47220843d3
+              stepCounter: 355509bf-a1e1-45da-9fd5-b00efde2421d
+            dataType: NUMBER(17,3)
+            description: ""
+            name: PREVCLOSE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 35cc6866-d53d-4d76-aaf4-dc24ba528e47
+                    stepCounter: 1c9ed412-1341-4d10-82fc-94583ea7b97a
+                transform: ""
+          - columnReference:
+              columnCounter: 1f4beda5-45b4-4921-bd8d-c5467979f8ef
+              stepCounter: 355509bf-a1e1-45da-9fd5-b00efde2421d
+            dataType: NUMBER
+            description: ""
+            name: NO_TRADES
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1a377bee-2c42-440d-856c-76b3f6f7aa57
+                    stepCounter: 1c9ed412-1341-4d10-82fc-94583ea7b97a
+                transform: ""
+          - columnReference:
+              columnCounter: 1de5fc31-2092-4baa-b2f1-45ecc8c3d303
+              stepCounter: 355509bf-a1e1-45da-9fd5-b00efde2421d
+            dataType: NUMBER
+            description: ""
+            name: NO_OF_SHRS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b271fc22-317a-4537-86db-727fd288b0ba
+                    stepCounter: 1c9ed412-1341-4d10-82fc-94583ea7b97a
+                transform: ""
+          - columnReference:
+              columnCounter: 4ff41f94-c420-40af-9790-89f3e38cf998
+              stepCounter: 355509bf-a1e1-45da-9fd5-b00efde2421d
+            dataType: VARCHAR(255)
+            description: ""
+            name: SYS_FILE_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: fc3becf3-a6ce-4c4d-a293-d6e69da126b6
+                    stepCounter: 1c9ed412-1341-4d10-82fc-94583ea7b97a
+                transform: ""
+          - columnReference:
+              columnCounter: 67ce0c5f-ed5b-45c8-a673-0f89b27d08b8
+              stepCounter: 355509bf-a1e1-45da-9fd5-b00efde2421d
+            dataType: TIMESTAMP
+            description: ""
+            name: SYSTEM_CREATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2e789904-099e-4b1e-b2c8-9b25aadf9e33
+                    stepCounter: 1c9ed412-1341-4d10-82fc-94583ea7b97a
+                transform: ""
+          - columnReference:
+              columnCounter: b1761126-5506-412d-8a6c-096bad1923b8
+              stepCounter: 355509bf-a1e1-45da-9fd5-b00efde2421d
+            dataType: DATE
+            description: ""
+            name: TRADE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5e429631-8e6f-4ab1-9727-ce76bc1da178
+                    stepCounter: 1c9ed412-1341-4d10-82fc-94583ea7b97a
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              DIM_EQUITY: ed0583b5-8265-4be4-97d6-e91ffb964a12
+              STG_EQUITY_RAW: 1c9ed412-1341-4d10-82fc-94583ea7b97a
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: MYSTORAGE
+                nodeName: STG_EQUITY_RAW
+              - locationName: MYSTORAGE
+                nodeName: VW_EQUITY_RAW
+            join:
+              joinCondition: |-
+                FROM {{ ref('MYSTORAGE', 'STG_EQUITY_RAW') }} "STG_EQUITY_RAW"
+                INNER JOIN {{ ref('MYSTORAGE', 'VW_EQUITY_RAW') }} "DIM_EQUITY"
+                ON "STG_EQUITY_RAW"."SC_CODE"="DIM_EQUITY"."SC_CODE"
+            name: DT_WRK_EQUITY_RAW
+            noLinkRefs: []
+      name: DT_WRK_EQUITY_RAW
+      overrideSQL: false
+      schema: ""
+      sqlType: "1"
+      type: sql
+    stepCounter: 355509bf-a1e1-45da-9fd5-b00efde2421d
